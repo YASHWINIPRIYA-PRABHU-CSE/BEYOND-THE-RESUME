@@ -1,5 +1,10 @@
 # BEYOND THE RESUME: AI-Powered Career Intelligence and Talent Readiness Platform
 
+**Project:** Beyond the Resume  
+**Team:** Yashwini Priya Prabhu & Sudharshini N S  
+**Yashwini's Contribution:** ML/NLP, Frontend, UI/UX, MVP Development, Integration and Documentation  
+**Sudharshini's Contribution:** Backend, Database Integration and Backend Support  
+
 > **“Your resume shows where you are. Your potential shows where you can go.”**
 
 Beyond The Resume is a production-grade career intelligence and talent readiness platform engineered to move beyond shallow keyword filtering. Built for students, academic placement cells, corporate recruiters, and talent development teams, it evaluates academic velocity, practical capstone experience, verified problem-solving benchmarks, and ATS structural integrity.
