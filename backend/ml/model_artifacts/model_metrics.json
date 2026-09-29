@@ -1,0 +1,399 @@
+{
+  "dataset_metadata": {
+    "total_records": 25000,
+    "train_samples": 20000,
+    "test_samples": 5000,
+    "features_count": 14,
+    "features": [
+      "cgpa",
+      "backlogs",
+      "projects_count",
+      "internships_count",
+      "certifications_count",
+      "coding_score",
+      "aptitude_score",
+      "communication_score",
+      "resume_score",
+      "dsa_level",
+      "web_dev_level",
+      "ml_ai_level",
+      "cloud_devops_level",
+      "db_sql_level"
+    ],
+    "train_test_split": "80% Train / 20% Test",
+    "cross_validation": "5-Fold Stratified K-Fold"
+  },
+  "classification_models": {
+    "Logistic Regression": {
+      "accuracy": 0.7586,
+      "precision": 0.7797,
+      "recall": 0.8677,
+      "f1": 0.8213,
+      "confusion_matrix": [
+        [
+          1019,
+          784
+        ],
+        [
+          423,
+          2774
+        ]
+      ],
+      "cv_mean": 0.7572,
+      "cv_std": 0.0043,
+      "type": "Linear / Probabilistic"
+    },
+    "Decision Tree": {
+      "accuracy": 0.7328,
+      "precision": 0.7575,
+      "recall": 0.8561,
+      "f1": 0.8038,
+      "confusion_matrix": [
+        [
+          927,
+          876
+        ],
+        [
+          460,
+          2737
+        ]
+      ],
+      "cv_mean": 0.7288,
+      "cv_std": 0.0058,
+      "type": "Tree-based / Rule"
+    },
+    "Random Forest": {
+      "accuracy": 0.7532,
+      "precision": 0.7708,
+      "recall": 0.8739,
+      "f1": 0.8191,
+      "confusion_matrix": [
+        [
+          972,
+          831
+        ],
+        [
+          403,
+          2794
+        ]
+      ],
+      "cv_mean": 0.7523,
+      "cv_std": 0.004,
+      "type": "Ensemble / Bagging"
+    },
+    "KNN (k=11)": {
+      "accuracy": 0.7328,
+      "precision": 0.765,
+      "recall": 0.8402,
+      "f1": 0.8008,
+      "confusion_matrix": [
+        [
+          978,
+          825
+        ],
+        [
+          511,
+          2686
+        ]
+      ],
+      "cv_mean": 0.7328,
+      "cv_std": 0.0082,
+      "type": "Instance-based"
+    },
+    "Support Vector Machine": {
+      "accuracy": 0.7538,
+      "precision": 0.7809,
+      "recall": 0.8549,
+      "f1": 0.8162,
+      "confusion_matrix": [
+        [
+          1036,
+          767
+        ],
+        [
+          464,
+          2733
+        ]
+      ],
+      "cv_mean": 0.7538,
+      "cv_std": 0.0075,
+      "type": "Margin-based Classifier"
+    },
+    "Neural Network (MLP)": {
+      "accuracy": 0.7498,
+      "precision": 0.7806,
+      "recall": 0.8467,
+      "f1": 0.8123,
+      "confusion_matrix": [
+        [
+          1042,
+          761
+        ],
+        [
+          490,
+          2707
+        ]
+      ],
+      "cv_mean": 0.7498,
+      "cv_std": 0.0069,
+      "type": "Feedforward Neural Network"
+    }
+  },
+  "regression_models": {
+    "Linear Regression": {
+      "r2": 0.9647,
+      "rmse": 0.4555,
+      "mae": 0.3602,
+      "mse": 0.2075,
+      "type": "Parametric Linear Model"
+    },
+    "Ridge Regression": {
+      "r2": 0.9647,
+      "rmse": 0.4555,
+      "mae": 0.3602,
+      "mse": 0.2075,
+      "type": "Regularized L2 Linear Model"
+    },
+    "Random Forest Regressor": {
+      "r2": 0.9389,
+      "rmse": 0.5997,
+      "mae": 0.4733,
+      "mse": 0.3596,
+      "type": "Non-linear Ensemble Regressor"
+    },
+    "Gradient Boosting Regressor": {
+      "r2": 0.9591,
+      "rmse": 0.4905,
+      "mae": 0.3902,
+      "mse": 0.2406,
+      "type": "Boosting Ensemble Regressor"
+    }
+  },
+  "feature_importances": [
+    {
+      "feature": "cgpa",
+      "importance": 0.2388
+    },
+    {
+      "feature": "coding_score",
+      "importance": 0.161
+    },
+    {
+      "feature": "aptitude_score",
+      "importance": 0.1101
+    },
+    {
+      "feature": "backlogs",
+      "importance": 0.0781
+    },
+    {
+      "feature": "resume_score",
+      "importance": 0.0779
+    },
+    {
+      "feature": "communication_score",
+      "importance": 0.0766
+    },
+    {
+      "feature": "dsa_level",
+      "importance": 0.0669
+    },
+    {
+      "feature": "projects_count",
+      "importance": 0.0619
+    },
+    {
+      "feature": "internships_count",
+      "importance": 0.0342
+    },
+    {
+      "feature": "certifications_count",
+      "importance": 0.0233
+    },
+    {
+      "feature": "web_dev_level",
+      "importance": 0.0194
+    },
+    {
+      "feature": "ml_ai_level",
+      "importance": 0.0193
+    },
+    {
+      "feature": "cloud_devops_level",
+      "importance": 0.017
+    },
+    {
+      "feature": "db_sql_level",
+      "importance": 0.0153
+    }
+  ],
+  "logistic_regression_coefficients": [
+    {
+      "feature": "coding_score",
+      "coefficient": 0.4784
+    },
+    {
+      "feature": "backlogs",
+      "coefficient": -0.4762
+    },
+    {
+      "feature": "cgpa",
+      "coefficient": 0.4511
+    },
+    {
+      "feature": "projects_count",
+      "coefficient": 0.3209
+    },
+    {
+      "feature": "aptitude_score",
+      "coefficient": 0.2883
+    },
+    {
+      "feature": "internships_count",
+      "coefficient": 0.2854
+    },
+    {
+      "feature": "communication_score",
+      "coefficient": 0.2605
+    },
+    {
+      "feature": "resume_score",
+      "coefficient": 0.0986
+    },
+    {
+      "feature": "db_sql_level",
+      "coefficient": -0.0271
+    },
+    {
+      "feature": "certifications_count",
+      "coefficient": 0.0254
+    },
+    {
+      "feature": "ml_ai_level",
+      "coefficient": -0.0241
+    },
+    {
+      "feature": "cloud_devops_level",
+      "coefficient": -0.0194
+    },
+    {
+      "feature": "dsa_level",
+      "coefficient": -0.0123
+    },
+    {
+      "feature": "web_dev_level",
+      "coefficient": -0.0059
+    }
+  ],
+  "unsupervised_clustering": {
+    "algorithm": "K-Means (k=5)",
+    "silhouette_score": 0.0913,
+    "pca_explained_variance_ratio": [
+      0.2469,
+      0.0983
+    ],
+    "pca_cumulative_variance": 0.3452,
+    "cluster_profiles": [
+      {
+        "cluster_id": 0,
+        "archetype": "Technically Strong",
+        "size": 3959,
+        "percentage": 19.79,
+        "description": "High coding ability, multiple practical projects and hands-on skill depth, ready for high-impact engineering roles.",
+        "recommended_action": "Target product companies, take advanced system design mock interviews, and contribute to open source.",
+        "avg_cgpa": 7.49,
+        "avg_projects": 2.9,
+        "avg_internships": 0.7,
+        "avg_coding": 53.9,
+        "avg_aptitude": 51.5,
+        "avg_communication": 59.8,
+        "avg_resume": 54.8
+      },
+      {
+        "cluster_id": 1,
+        "archetype": "Academically Focused",
+        "size": 4245,
+        "percentage": 21.22,
+        "description": "Exceptional CGPA, strong foundational theoretical aptitude, needs practical portfolio expansion.",
+        "recommended_action": "Build 2 end-to-end full-stack or ML production projects and secure a practical internship.",
+        "avg_cgpa": 8.21,
+        "avg_projects": 4.0,
+        "avg_internships": 1.0,
+        "avg_coding": 74.6,
+        "avg_aptitude": 56.4,
+        "avg_communication": 60.8,
+        "avg_resume": 60.7
+      },
+      {
+        "cluster_id": 2,
+        "archetype": "Balanced Career Ready",
+        "size": 1384,
+        "percentage": 6.92,
+        "description": "Well-rounded performance across CGPA, projects, internships, and communication. High placement readiness.",
+        "recommended_action": "Polish behavioral interview STAR responses and apply for competitive target role listings.",
+        "avg_cgpa": 7.0,
+        "avg_projects": 2.9,
+        "avg_internships": 0.4,
+        "avg_coding": 59.2,
+        "avg_aptitude": 45.6,
+        "avg_communication": 58.3,
+        "avg_resume": 51.0
+      },
+      {
+        "cluster_id": 3,
+        "archetype": "Emerging Learner",
+        "size": 4526,
+        "percentage": 22.63,
+        "description": "Demonstrates solid baseline learning potential; needs focused project mentoring and DSA consistency.",
+        "recommended_action": "Complete 30 core DSA patterns and execute a structured capstone portfolio project.",
+        "avg_cgpa": 6.6,
+        "avg_projects": 2.2,
+        "avg_internships": 0.1,
+        "avg_coding": 48.5,
+        "avg_aptitude": 41.3,
+        "avg_communication": 56.1,
+        "avg_resume": 44.1
+      },
+      {
+        "cluster_id": 4,
+        "archetype": "Needs Structured Development",
+        "size": 5886,
+        "percentage": 29.43,
+        "description": "Facing academic or aptitude bottlenecks; requires structured foundation bootcamps and core concept reinforcement.",
+        "recommended_action": "Focus on academic clearance, aptitude practice tests, and fundamental programming bootcamps.",
+        "avg_cgpa": 7.45,
+        "avg_projects": 3.2,
+        "avg_internships": 0.2,
+        "avg_coding": 68.8,
+        "avg_aptitude": 47.8,
+        "avg_communication": 58.3,
+        "avg_resume": 49.7
+      }
+    ]
+  },
+  "fairness_and_limitations": {
+    "dataset_nature": "High-fidelity synthetic benchmark calibrated to empirical placement distributions.",
+    "data_limitations": "Does not replace human contextual evaluation. Real-world interview performance carries situational variance not captured in tabular profiles.",
+    "departmental_parity": {
+      "Computer Science": {
+        "placement_rate": 0.69
+      },
+      "Information Technology": {
+        "placement_rate": 0.67
+      },
+      "AI & Machine Learning": {
+        "placement_rate": 0.68
+      },
+      "Data Science": {
+        "placement_rate": 0.65
+      },
+      "Electronics & Comm": {
+        "placement_rate": 0.58
+      },
+      "Electrical Engineering": {
+        "placement_rate": 0.54
+      }
+    },
+    "responsible_ai_notice": "Predictions provide guidance and targeted growth opportunities; they must never be used as exclusionary filters or definitive ceilings."
+  }
+}
